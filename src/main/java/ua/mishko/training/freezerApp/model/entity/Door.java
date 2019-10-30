@@ -17,5 +17,5 @@ public class Door {
     private DoorLightIndicator doorLightIndicator;
 
     @Column(name = "isDoorOpen")
-    private boolean isDoorOpen;
+    private String isDoorOpen;
 }

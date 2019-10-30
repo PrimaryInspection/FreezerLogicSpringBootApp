@@ -17,7 +17,7 @@ public class FreezerBox {
     private String name;
 
     @Column(name = "isDoorOpen")
-    private boolean isDoorOpen;
+    private String isDoorOpen;
 
     @OneToOne(optional=false, cascade=CascadeType.ALL)
     @JoinColumn (name="temperatureController_id")

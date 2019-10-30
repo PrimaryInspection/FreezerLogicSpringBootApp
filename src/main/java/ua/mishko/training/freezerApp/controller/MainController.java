@@ -23,17 +23,13 @@ public class MainController {
         return "/add_door";
     }
 
-    //TODO разобраться с добавлением двери(Понять как записывать в форму вложенные обьекты,
-    //TODO возможно фримаркер моменять на HTML и страдать.
-    @PostMapping
+    @PostMapping("/add_door")
     public String addDoor(@ModelAttribute Door door){
 
         doorService.add(door);
         return "redirect:/doors";
     }
 
-    //TODO Не забыть сделать нормально, а не в тестовом режиме(см. файл index.ftl).
-    //TODO Найти замену переменным-флагам типа Boolean, либо придумать шото лютое.
     @GetMapping("/doors/{id}")
     public String getDoorById(@PathVariable("id") Long id, Model model){
         model.addAttribute("door",doorService.getOne(id));

@@ -17,7 +17,7 @@ public class TemperatureController {
     private String voiceSignal;
 
     @Column(name = "isEngineEnabled")
-    private boolean isEngineEnabled;
+    private String isEngineEnabled;
 
     @Column(name = "thermometerValue")
     private Double thermometerValue;
